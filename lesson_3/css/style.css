@@ -1,0 +1,48 @@
+@import url("reset.css");
+.nav{
+	color: aquamarine;
+ 
+}
+.navigation{
+	color: blue;
+}
+h1,h2,h3, h4 {
+	color: red;
+	text-align: center;
+}
+.about {
+	color: yellow;
+}
+.about ~ p {
+	color: purple;
+}
+.about + p {
+	color: orangered;
+}
+.text1{
+	color: burlywood
+}
+.part1 > p {
+	color:aqua
+}
+.building{
+	color: goldenrod;
+}
+.building1 {
+	color: brown
+}
+.building2{
+	color: grey;
+}
+.using{
+	color: olive;
+}
+.using+p{
+	color: indigo;
+}
+.sites{
+	color: blue;
+}
+footer {
+	color: sienna;
+}
