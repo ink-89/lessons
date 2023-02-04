@@ -1,0 +1,84 @@
+@import url("reset.css");
+@font-face {
+	font-family: 'Cormorant Garamond';
+	src: url('../fonts/CormorantGaramond-Light.woff') format('woff2'),
+		 url('../fonts/CormorantGaramond-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Cormorant Garamond';
+	src: url('../fonts/CormorantGaramond-Bold.woff2') format('woff2'),
+		 url('../fonts/CormorantGaramond-Bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+body{
+	font-family: "Cormorant Garamond", sans-serif;
+	font-size: 18px;
+	line-height: 1;
+	white-space: nowrap;
+	word-spacing: 4px;
+}
+h1{
+	font-size: 30px;
+	color: rgb(255, 123, 0);
+	text-align: center;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+.about {
+	font-family: "Caveat";
+	color: rgba(0, 248, 91, 0.836);
+	text-shadow: 2px 2px 5px rgb(179, 209, 29);
+	text-transform: lowercase;
+}
+h2{
+font-weight: 700;
+font-size: 20px;
+font-style: oblique;
+}
+#p-1, #p-2, #p-3 {
+	font-family: "Caveat";
+	font-style: italic;
+	color: blue;
+	text-align: center;
+	text-shadow: 2px 2px 5px rgb(237, 254, 1);
+	letter-spacing: 8px;
+}
+.end{
+font-weight: 700;
+}
+.up{
+	font-weight: 700;
+}
+li{
+	color: red;
+}
+span{
+	color: blue;
+	text-decoration: underline;
+}
+.top{
+	text-align: center;
+}
+.end{
+	font-family: "Caveat";
+}
+p{
+	text-indent: 20px;
+	text-align: justify;
+}
+.my-info{
+	text-align: right;
+}
+.sensors{
+	text-decoration: line-through;
+}
+.work + p{
+	text-decoration: overline;
+	text-transform: capitalize;
+}
