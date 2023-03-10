@@ -1,0 +1,184 @@
+@import url("reset.css");
+@import url(https://fonts.googleapis.com/css?family=Inter:300,500,600,700&display=swap);
+
+.header__container {
+	font-family: "Inter", serif;
+	background-color: #ffffff;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 1.5;
+	color: #212B36;
+	max-width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.menu__item {
+	position: relative;
+	display: inline-block;
+	font-weight: 500;
+	min-height: 100px;
+	vertical-align: middle;
+	padding: 40px 0 0 0;
+	text-align: left;
+	z-index: 5;
+}
+.menu__item:hover .sub-menu {
+	display: block;
+
+}
+.menu__item:hover .menu__sub-menu {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+.menu__sub-menu{
+	color: #637381;
+	background-color: #ffffff;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	min-width: 150px;
+	opacity: 0;
+	visibility:hidden;
+	pointer-events:none;
+	border-radius: 5px;
+	padding: 20px 0 0 0;
+}
+
+.menu__item:not(:last-child) {
+	margin-right: 10px;
+}
+
+/* ----додаткові вкладки-----  */
+.sub-menu__item:hover .new-arrivals__item{
+	display: block;
+}
+.sub-menu__item:hover .menu__sub-menu-new-arrivals {
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+}
+.menu__sub-menu-new-arrivals{
+	background-color: #ffffff;
+	position: absolute;
+	left: 101%;
+	top: 16%;
+	min-width: 140px;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	border-radius: 5px;
+}
+
+body{
+	background-color: #E5E5E5;
+}
+
+.menu__list::before{
+	content: "";
+	display: inline-block;
+	background: url("../img/icons/Logo.svg") no-repeat;
+	width: 160px;
+	height: 40px;
+	vertical-align: middle;
+	margin-right: 46px;
+}
+.user-area{
+	position: relative;
+	display: inline-block;
+	top: -60px;
+	left: 500px;
+	
+}
+.user-area__item:not(:last-child){
+	margin-right: 20px;
+}
+
+.menu__link:hover{
+color: #3056D3;
+text-decoration: underline;
+}
+
+.sub-menu__link:hover, .new-arrivals__link:hover{
+	color: #3056D3;
+}
+.menu__arrow{
+	content: "";
+	display: inline-block;
+	background: url("../img/icons/Frame1000002938.svg") no-repeat;
+	width: 11px;
+	height: 6px;
+}
+
+
+/* різні типи позиціювання */
+
+main{
+	padding: 20px;
+}
+.main-menu {
+	border: 5px solid blue;
+	max-width: 1000px;
+	height: 600px;
+	margin: 0 auto;
+	position: relative;
+}
+.main-menu div{
+	line-height: 80px;
+	font-size : 20px;
+	font-weight: 700;
+	text-align: center;
+
+}
+.sub-menu__1 {
+	background-color: red;
+	position: relative;
+	z-index: 1;
+}
+.sub-menu__2 {
+	background-color: yellow;
+	position: fixed;
+	width: 100%;
+	top: 300px;
+	left: 0;
+	z-index: 2;
+}
+.sub-menu__3 {
+	background-color: green;
+	position: absolute;
+	left: 0;
+	right: 40px;
+	top: 150px;
+	z-index: 3;
+}
+.sub-menu__4 {
+	background-color: rgb(184, 26, 145);
+	position: sticky;
+	left: 0;
+	right: 40px;
+	top: 20px;
+	z-index: 4;
+}
+
+
+footer{
+	padding: 15px;
+}
+.list-test{
+font-size: 18px;
+}
+.list-test li{
+margin: 0 0 20px 0;
+position: relative;
+left: 30px;
+	}
+
+.list-test li::before{
+	content: "";
+	background: url("../img/icons/Frame.svg") 0 0 no-repeat;
+	position: absolute;
+	width: 40px;
+	height: 50px;
+	top: -5px;
+	left: -30px;
+}
