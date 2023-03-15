@@ -1,0 +1,336 @@
+@import url("reset.css");
+@import url(https://fonts.googleapis.com/css?family=Inter:300,500,600,700&display=swap);
+
+
+[class*="__container"]{
+	padding-left: 15px;
+	padding-right: 15px;
+	margin: 0 auto;
+	height: 100%;
+	width: 1260px;
+}
+
+body{
+	background-color: coral;
+}
+.block__content div{
+	color: azure;
+	width: 150px;
+	height: 150px;
+	padding-top: 60px;
+	text-align: center;
+	margin: 25px;
+	transition: 0.9s;
+}
+.block__content{
+	display: inline-block;
+	background-color: black;
+	margin: 25px;
+}
+
+.translate{
+	background-color: grey;
+}
+.translate:hover{
+	transform: translate(20px, 10px);
+}
+.scale{
+	background-color: red;
+}
+.scale:hover{
+	transform: scale(0.5, 0.6);
+}
+.scale:active {
+	transform: scale(-1, 0.5);
+}
+.rotate{
+	background-color: rgb(195, 255, 0);
+}
+.rotate:hover{
+
+	transform: rotate(-360deg);
+}
+.skew{
+	background-color:rgb(49, 142, 136)
+}
+.skew:hover{
+	transform: skew(-10deg, 2deg);
+}
+.matrix {
+	background-color:rgb(49, 142, 57)
+}
+.matrix:hover{
+	transform: matrix(2, 0, 1, 1, 70, 0);
+}
+.multi {
+	background-color:rgb(227, 239, 6)
+}
+.multi:hover{
+	transform: translate(10px, 30px) scale(2) rotate(10deg);
+}
+.transform-origin {
+	transform-origin: right;
+	background-color:rgb(142, 49, 109)
+}
+.transform-origin:hover{
+	transform: rotate(-10deg);
+}
+
+/* --------3D----------- */
+
+
+h1{
+	text-decoration:underline;
+	text-align: center;
+	color: red;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.block__content3d div{
+	width: 150px;
+	height: 150px;
+	padding-top: 60px;
+	text-align: center;
+	margin: 25px;
+	transition: 0.9s;
+}
+.block__content3d{
+	display: inline-block;
+	perspective-origin: center;
+	perspective: 100px;
+	background-color: black;
+	margin: 25px;
+	
+}
+.perspective:hover {
+	transform: rotateX(50deg);
+}
+.perspective{
+background-color:rgb(234, 171, 24);
+}
+.translate3d {
+	background-color:rgb(173, 89, 96)
+}
+
+.translate3d:hover {
+	transform:translate3d(70px, 70px, -50px);
+}
+.rotate3d {
+	background-color:rgb(38, 21, 85)
+}
+.rotate3d:hover  {
+transform: rotate3d(10, 2, 8, 30deg);
+}
+.scale3d {
+	background-color:rgb(108, 113, 169)
+}
+.scale3d:hover {
+	transform: scale3d(0.4, 0.4, 1);
+}
+
+.multi3d {
+	background-color:rgb(131, 123, 165)
+}
+.multi3d:hover {
+	transform: translate3d(70px, 70px, -50px) rotate3d(12, 4, 2, 20deg);
+}
+
+/* ---backface-visivility--- */
+
+.flip {
+	perspective: 500px;
+	transform-style: preserve-3d;
+}
+.flip__body {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	transition: all 0.8s ease 0s;
+	transform-style: preserve-3d;
+}
+.flip__front,
+.flip__back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flip__front {
+	z-index: 2;
+	transform: rotateY(0deg);
+	background-color: #501587;
+
+	backface-visibility: hidden;
+}
+.flip__back {
+	transform: rotateY(-180deg);
+	background-color: rgba(121, 79, 69, 0.5);
+}
+.flip:hover .flip__body {
+	transform: rotateY(-180deg);
+}
+.flip_wrapper{
+	margin-left: 40px;
+}
+/* ---car--- */
+
+.wrapper__car{
+	background: url("../img/images/98.jpg") no-repeat;
+	height: 1069px;
+}
+
+.car{
+	margin-top: 50px;
+	top: 800px;
+	right: -55px;
+	bottom: 100px;
+	position: relative;	
+}
+.car__bottom{
+	background-color: rgba(231, 150, 10);
+	width: 500px;
+	height: 80px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	border: 2px solid;
+	border-radius: 10px;
+	position: absolute;
+	z-index: 40;
+}
+.car__windows{
+	width: 94px;
+	height: 84px;
+	position: absolute;
+	border-bottom: 100px solid rgb(218, 144, 15);
+	border-left: 60px solid transparent;
+	z-index: 100;
+	left: 400px;
+	bottom: -2px;
+}
+.whell-left{
+	width: 80px;
+	height: 80px;
+	background-color: rgb(218, 144, 15);
+	position: absolute;
+	border-radius: 50%;
+	border: 1px solid black;
+	left: 400px;
+	bottom: -130px;
+	z-index: 110;
+}
+.whell-right{
+	width: 80px;
+	height: 80px;
+	background-color: rgb(218, 144, 15);
+	position: absolute;
+	border-radius: 50%;
+	border: 1px solid black;
+	left: 700px;
+	bottom: -130px;
+	z-index: 110;
+}
+.whell-right::after{
+	content:"";
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(74, 36, 72);
+	border-radius: 50%;
+	border: 1px solid black;
+	margin-left: 14px;
+	margin-top: 15px;
+}
+.whell-left::after{
+	content:"";
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(74, 36, 72);
+	border-radius: 50%;
+	border: 1px solid black;
+	margin-left: 14px;
+	margin-top: 15px;
+}
+.car__bottom::after{
+	content:"";
+	background-color: rgb(237, 210, 6);
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border-radius: 5px;
+}
+.car:hover .car__bottom::after{
+	box-shadow: -40px 0px 20px 20px #d8ff4c;
+}
+.headlight-back{
+	background-color: rgb(249, 51, 29);
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border-radius: 5px;
+	position: absolute;
+	bottom: -80px;
+	left: 835px;
+	z-index: 111;
+}
+.car:hover .headlight-back{
+   box-shadow: -3px 0px 20px 20px #ff4c4c;
+}
+.car__door{
+	width: 80px;
+	height: 80px;
+	background-color: rgb(218, 144, 15);
+	position: absolute;
+	border-radius: 2%;
+	border: 1px solid black;
+	left: 500px;
+	bottom: -80px;
+	z-index: 112;
+}
+.car__flag{
+	width: 2px;
+	height: 45px;
+	background-color: rgb(218, 144, 15);
+	position: absolute;
+	border: 1px solid black;
+	left: 850px;
+	bottom: -1px;
+	z-index: 113;
+}
+.car__flag::after{
+	content:"";
+	display: inline-block;
+	position: relative;
+	background: url("../img/images/03.png") 0 0 no-repeat;
+	width:140px;
+	height: 80px;
+	bottom: 9px;
+	right: 2px;
+}
+.rocket{
+	background: url("../img/images/02.png") 0 0 no-repeat;
+	display: inline-block;width:190px;
+	height: 190px;
+	position: absolute;
+	bottom: -30px;
+	right: 400px;
+	z-index: 113;
+	transform: rotate(-20deg);
+	z-index: 11;
+}
+.rocket::after{
+	content:"";
+	background-color: rgb(218, 144, 15) ;
+	width: 89px;
+	height: 5px;
+	display: inline-block;
+	margin-bottom: -110px;
+	transform: rotate(-20deg);
+}
