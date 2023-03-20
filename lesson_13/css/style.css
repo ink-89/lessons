@@ -1,0 +1,319 @@
+@import url("reset.css");
+@import url(https://fonts.googleapis.com/css?family=Inter:300,500,600,700&display=swap);
+
+.wrapper_car{
+	border: rgb(208, 236, 0) 4px solid;
+	background: rgb(204, 195, 195) no-repeat;
+	max-width: 1900px;
+	height: 730px;
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+.car{
+	margin: 0 auto;
+	position: relative;
+	height: 400px;	
+	width: 500px;
+	top: 310px;
+	animation: car-history 7s;
+}
+.car__bottom{
+	background-color: rgba(231, 150, 10);
+	width: 400px;
+	height: 80px;
+	top: 250px;
+	left: -70px;
+	right: 0;
+	margin: 0 auto;
+	border: 2px solid;
+	border-radius: 10px;
+	position: absolute;
+	z-index: 10;
+}
+.car__windows{
+	width: 94px;
+	height: 84px;
+	position: absolute;
+	border-bottom: 100px solid rgb(218, 144, 15);
+	border-left: 60px solid transparent;
+	z-index: 11;
+	top: 160px;
+	left:50px;
+}
+.whell-left{
+	width: 80px;
+	height: 80px;
+	background-color: rgb(218, 144, 15);
+	position:absolute;
+	border-radius: 50%;
+	border: 1px solid black;
+	outline: 5px dashed black;
+	left: 30px;
+	bottom: 30px;
+	z-index: 12;
+	animation: car__wheels 8s;
+}
+.whell-right{
+	width: 80px;
+	height: 80px;
+	background-color: rgb(218, 144, 15);
+	position: absolute;
+	border-radius: 50%;
+	border: 1px solid black;
+	outline: 5px dashed black;
+	left: 290px;
+	bottom: 30px;
+	z-index: 13;
+	animation: car__wheels 8s;
+}
+.whell-right::after{
+	content:"";
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(74, 36, 72);
+	border-radius: 50%;
+	border: 1px solid black;
+	outline: 5px dashed black;
+	margin-left: 14px;
+	margin-top: 15px;
+}
+.whell-left::after{
+	content:"";
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	background-color: rgb(74, 36, 72);
+	border-radius: 50%;
+	border: 1px solid black;
+	outline: 5px dashed black;
+	margin-left: 14px;
+	margin-top: 15px;
+	
+}
+.car__bottom::after{
+	content:"";
+	background-color: rgb(184, 168, 44);
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border-radius: 5px;
+}
+.car:hover .car__bottom::after{
+	box-shadow: -40px 0px 20px 20px #d8ff4c;
+}
+.headlight-back{
+	background-color: rgb(249, 51, 29);
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 70px;
+	left: 385px;
+	z-index: 15;
+}
+.car:hover .headlight-back{
+   box-shadow: -3px 0px 20px 20px #ff4c4c;
+}
+.car__door{
+	width: 80px;
+	height: 79px;
+	background-color: rgb(218, 144, 15);
+	position: absolute;
+	border-radius: 2%;
+	border: 1px solid black;
+	left: 145px;
+	bottom: 71px;
+	z-index: 16;
+}
+.car__flag{
+	width: 2px;
+	height: 45px;
+	background-color: rgb(218, 144, 15);
+	position: absolute;
+	border: 1px solid black;
+	left: 410px;
+	bottom: 145px;
+	z-index: 17;
+}
+.car__flag::after{
+	content:"";
+	display: inline-block;
+	background: url("../img/images/03.png") 0 0 no-repeat;
+	width: 140px;
+	height: 80px;
+	right: 2px;
+}
+.rocket{
+	background: url("../img/images/02.png") 0 0 no-repeat;
+	display: inline-block;
+	width: 190px;
+	height: 190px;
+	position: absolute;
+	bottom: 120px;
+	right: 115px;
+	z-index: 18;
+	visibility: visible;
+	transform: rotate(-40deg);
+	animation: rocket 2s;
+	animation-delay: 20s;
+	animation-fill-mode: forwards;
+
+}
+.rocket-area{
+	background-color: rgb(218, 15, 56);
+	width: 89px;
+	height: 5px;
+	position: absolute;
+	left: 220px;
+	bottom: 170px;
+	z-index: 9;
+	transform: rotate(-50deg);
+}
+.ship{
+	background: url("../img/images/04.png") no-repeat;
+	display: inline-block;
+	width: 600px;
+	height: 190px;
+	position: absolute;
+	bottom: 500px;
+	left: 10px;
+	z-index: 200;
+	visibility: hidden;
+	animation: ship 7s;
+	animation-delay: 3s;
+	animation-fill-mode: forwards;
+}
+.boloto-say{
+	position: absolute;
+	top: 80px;
+	left: 450px;
+	width: 120px;
+	height: 60px;
+	text-align: center;
+	border: 2px solid #666;
+	border-radius: 10px;
+	visibility: hidden;
+	transform: scale(1);
+	animation: boloto-say 4s;
+	animation-delay: 12s;
+}
+.ua-say{
+	position: absolute;
+	top: 80px;
+	left: 5px;
+	width: 120px;
+	height: 60px;
+	text-align: center;
+	border: 2px solid #666;
+	border-radius: 10px;
+	visibility: hidden;
+	transform: scale(1);
+	animation: ua-say 3s;
+	animation-delay: 17s;
+}
+
+.fire{
+	background: url("../img/images/05.gif") no-repeat;
+	display: inline-block;
+	position: absolute;
+	width: 400px;
+	height: 300px;
+	bottom: 400px;
+	left: 150px;
+	top: 80px;
+	z-index: 201;
+	visibility: hidden;
+	animation: fire 10s;
+	animation-delay: 21s;
+	animation-fill-mode: forwards;
+}
+.fireman{
+	background: url("../img/images/055.png")no-repeat;
+	display: inline-block;
+	position: absolute;
+	width: 1500px;
+	height: 1500px;
+	left: 1040px;
+	visibility: hidden;
+	animation: fireman 2s;
+	animation-delay: 22s;
+	animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes car-history{
+	0%{
+		transform: translate(200%, 0px);
+	}
+	100%{
+		transform: translate(0px, 0px);
+	}
+}
+@keyframes car__wheels{
+	0%{
+		transform: rotate(360deg);
+	}
+	
+}
+@keyframes ship{
+	0%{
+		transform: translate(-300%, 0px);
+	}
+	100%{
+		transform: translate(0%, 0px);
+		visibility: visible;
+	}
+}
+@keyframes boloto-say{
+	0%{
+		transform: scale(0.5);
+	}
+	100%{
+		visibility: visible;
+	}
+}
+@keyframes ua-say{
+	0%{
+		transform: scale(0.5);
+	}
+	100%{
+		visibility: visible;
+	}
+}
+@keyframes rocket{
+	0%{
+	}
+	10% {
+		transform: rotate(-20deg);
+	}
+	90%{
+		transform: translate(-800px, -550px);
+	}
+	100%{
+	visibility: hidden;
+	opacity: 0;
+	}
+}
+@keyframes fire{
+	100%{
+		visibility: visible;
+	}
+	}
+	@keyframes fireman{
+		0%{
+			transform: translate(0%, 400px);
+		}
+		80%{
+			transform: translate(0px, 0px);
+		}
+		100%{
+			visibility: visible;
+		}
+	}
+
+
