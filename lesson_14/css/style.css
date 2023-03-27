@@ -1,0 +1,129 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,500,600,700&display=swap");
+
+body{
+	font-family: "Poppins";
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 1.6;
+	color: #495057;
+	
+}
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main{
+	flex-grow: 1;
+}
+.content {
+	flex: 1 1 auto;
+}
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+}
+.header__menu {
+	padding: 44px 0;
+}
+.menu__items {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 500;
+	line-height: 2;
+}
+.menu__item_columns {
+	display: flex;
+	justify-content: flex-end;
+	
+}
+.menu__item_column:not(:last-child){
+	margin-right: 20px;
+}
+.columns__column {
+	flex: 0 1 33.33%;
+	padding: 0 15px;
+	margin: 0 0 45px 0;
+
+}
+.columns{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+.column__body{
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+	align-items: flex-start;	
+}
+.column__title {
+font-weight: 700;
+font-size: 25px;
+line-height: 1.6;
+color: #212529;
+}
+.column__subtitle::after{
+	content:"";
+	display: flex;
+	width: 390px;
+	border: 1px solid #E5E5E5;
+	margin-top: 15px;
+}
+.footer{
+	text-align: center;
+}
+.bottom{
+	display: inline-flex;
+	margin: 60px 0;
+}
+.bottom__text{
+	width: 178px;
+	height: 40px;
+	background: #212529;
+	border-radius: 3px;
+	font-weight: 500;
+	color: #F8F9FA;
+	padding: 12px 0;
+}
+.column__image{
+	position: relative;
+	display: flex;
+	flex: 0 0 auto;
+}
+.column_logo{
+	display: inline-flex;
+	position: absolute;
+	width: 64px;
+	height: 25px;
+	right: 20px;
+	top: 30px;
+	bottom: 220px;
+	left: 310px;
+	background: rgba(33, 37, 41, 0.3);
+	border-radius: 3px;
+	font-weight: 700;
+	font-size: 8px;
+	line-height: 20px;
+	color: #F8F9FA;
+	padding: 2px 12px;
+	text-transform: uppercase;
+}
+.column_logo:hover{
+	background-color: #495057;
+	color: rgb(255, 191, 0);
+	transform: scale(1.1);
+	transition: all 0.2s;
+}
+.column__image:hover{
+	box-shadow: 10px 5px 5px rgba(82, 79, 79, 0.719);
+	transform: scale(1.05);
+}
+.menu__item_column:hover{
+	text-decoration: 2px underline red;
+	transition: all 0.3s;
+	color: rgba(73, 80, 87, 0.5);
+	
+}
