@@ -1,0 +1,222 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,500,600,700&display=swap");
+
+body{
+	font-family: "Poppins";
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.6;
+	color: #9C9C9C;
+	
+}
+.wrapper {
+	overflow: hidden;
+	min-height: 100%;
+
+}
+.wrapper > main{
+	flex-grow: 1;
+}
+.page{
+	padding: 112px 0;
+}
+[class*="__container"]{
+max-width: 1240px;
+margin: 0 auto;
+padding: 0 15px;
+}
+
+.page__minimalist_room{
+	padding-bottom: 50px;
+}
+.room__header{
+	max-width: 518px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 53px;
+	color: #000000
+}
+
+.header__title {
+	margin-bottom: 40px;
+	font-weight: 700;
+	font-size: 56px;
+	line-height: 1.4;
+}
+.header__image {
+	width: 100%;
+	margin-bottom: 100px;
+}
+.room__columns { 
+	display: flex;
+	gap: 32px;	
+	align-items: flex-start;
+	margin-bottom: 81px;
+}
+.column__item{
+	flex: 0 1 48.6%;
+}
+.item__title:not(:last-child) {
+	margin-bottom: 33px;
+}
+.item__text:not(:last-child) {
+	margin-bottom: 51px;
+}
+.item__footer {
+	display: flex;
+	gap: 80px;
+	align-items: flex-start;
+}
+.item__text p:not(:last-child) {
+	margin-bottom: 30px;
+}
+.room__gallery {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 32px;
+}
+.room__gallery_image{
+	flex: 1 0 46%;	
+}
+
+.room__gallery_big_image{
+	flex: 0 0 100%;
+}
+
+.header__achievement{
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.5;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+}
+.header__achievement-title::after {
+	content: "";
+	display: inline-block;
+	border: 2px solid black;
+	width: 464px;
+	position: relative;
+	bottom: 4px;
+	left: 26px;
+}
+.achievement__colums {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	row-gap: 40px;
+}
+
+.colums__item {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 20px;
+	justify-content: space-between;
+	margin: 0 -16px;
+}
+
+.item__image {
+	padding: 0 16px;
+	flex: 0 1 62.16%;
+}
+.item__body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex-wrap: wrap;
+	row-gap: 20px;
+	flex: 0 1 27.84%;
+	padding: 0 16px;
+}
+h3{
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 1.4;
+	color:#333333
+}
+img{
+	width: 100%;
+}
+/* -----ховери---- */
+.room__header h1{
+	transition: all 1s;
+}
+.room__header h1:hover{
+color: rgba(255, 217, 0, 0.711);
+transition: all 0.5s;
+}
+
+.item__title:hover{
+	text-decoration: underline goldenrod;
+	transition: all 0.3s;
+}
+
+.room__gallery_image{
+	overflow: hidden;
+	transition: 0.6s;
+}
+
+.room__gallery_image:hover img{
+	transform: scale(1.1);
+}
+/*  
+Налаштування адаптиву  992 и віше комп
+768-до 991,8 планшет
+от 320до 767 телефон*/
+
+@media (max-width:991px){
+	.page{
+  padding: 30px 0;
+  }
+  .header__title {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 30px;
+  }
+  .page__minimalist_room{
+  padding-bottom: 30px;
+  }
+  .room__header{
+  margin-bottom: 15px;
+  
+  }
+  .header__image {
+  margin-bottom: 20px;
+  }
+  
+  .room__columns { 
+	flex-wrap: wrap;
+  margin-bottom: 20px;
+  }
+  .column__item{
+	flex: 1 0 100%;
+  }
+  .item__title:not(:last-child) {
+	margin-bottom: 5px;
+}
+  .item__text:not(:last-child) {
+  margin-bottom: 20px;
+  }
+  .item__text p:not(:last-child) {
+  margin-bottom: 20px;
+  }
+  .item__footer {
+  gap: 30px;
+  justify-content: space-between;
+  }
+  .room__gallery {
+  flex: 0 0 100%;
+  }
+}
+@media (max-width:767.98px){
+	
+	
+	.item__image {
+		flex: 1 0 100%;
+	}
+	.item__body {
+		row-gap: 5px;
+		flex: 0 1 100%;
+	}
+	
+}
