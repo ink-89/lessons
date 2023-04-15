@@ -35,13 +35,14 @@ h1{
 	font-size: 24px;
 	line-height: 1.25;
 	color: #212B36;
-	padding-bottom: 30px;
+	margin-bottom: 30px;
 }
 .info__input{
 	border: 1px solid #E7E7E7;
 	border-radius: 7px;
 	width: 336px;
 	height: 54px;
+	padding: 0 10px;
 }
 .info__form select{
 	display: flex;
@@ -54,6 +55,7 @@ h1{
 	font-weight: 500;
 	line-height: 1.5;
 	color: #637381;
+	padding: 0 10px;
 	
 }
 
@@ -83,12 +85,11 @@ select{
 }
 
 .info_area{
-	padding-left: 25px;
-}
-.info_area{
 	padding: 25px;
 }
 .info__form_textarea{
+	display: flex;
+	width: 100%;
 	padding-bottom: 35px;
 }
 .checkout__checkbox_info .info__form:not(:last-child){
@@ -148,13 +149,13 @@ h3{
 	font-size: 24px;
 	line-height: 2.83;
 	color: #000000;
-	padding-bottom: 40px;
+	margin-bottom: 30px;
 
 }
 .form__line{
 	display: flex;
 	flex-direction: row;
-	justify-content: end;
+	justify-content: flex-end;
 	flex-wrap: wrap;
 	row-gap: 15px;
 	padding-bottom: 27px;
@@ -164,9 +165,11 @@ h3{
 	background: #FFFFFF;
 	border: 1px solid #C4C4C4;
 	border-radius: 0px;
+	padding: 0 10px;
 	flex: 0 1 74.26%;
 }
 .form__label{
+
 	flex: 0 1 25.74%;
 }
 .form__line select{
@@ -176,6 +179,7 @@ h3{
 	color: #3f3f3f;
 	font-size: 16px;
 	line-height: 1.25;
+	padding: 0 10px;
 }
 p{
 	font-size: 14px;
@@ -267,19 +271,85 @@ span{
 	padding-left: 8px;
 }
 
-.shipping__radio::before{
-	content: "";
-	width: 606px;
-	height: 0px;
-	position: absolute;
-	border: 1px solid #C4C4C4;
-	bottom: 76px;
+.radio__block, .shipping__radio:last-child{
+	padding-top: 10px;
+	border-top:2px solid #C4C4C4;
 }
-.shipping__radio::after{
-	content: "";
-	width: 443px;
-	height: 0px;
-	position: absolute;
-	border: 1px solid #C4C4C4;
-	bottom: 26px;
+
+
+@media (max-width:720px){
+	.info__form {
+		flex: 0 0 100%;
+	}
+	.info__input{
+		width: 100%;
+	}
+	.checkout__colums_info{
+		row-gap: 20px;
+	}
+	.info__form select{
+		width: 100%;
+	}
+	.info__form_textarea{
+		display: flex;
+		width: 100%;
+	}
+	.checkout__checkbox_info .info__form:not(:last-child){
+		margin-bottom: 10px;
+	}
+	.checkout__checkbox_info{
+		margin-bottom: 30px;
+	}
+	.discount__info .info__form{
+		flex: 0 1 55%;
+		flex-direction: row;
+		justify-content: space-between;
+	  }
+	  .shipping__title, h4{
+		padding-bottom: 1px;
+	}
 }
+@media (max-width:505px){
+	.form__input{
+		flex: 0 1 100%;
+	}
+	.form__label{
+		flex: 0 1 100%;
+	}
+	.form__line{
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+		row-gap: 5px;
+		padding-bottom: 25px;
+	}
+	.form__line select{
+		flex: 0 1 100%;
+	}
+	.discount__info{
+		flex-direction: column;
+		align-items: start;
+		row-gap: 20px;
+	}
+	.radio__info{
+		flex: 0 1 60.8%;
+		justify-content:space-between;
+		row-gap: 10px;
+		}
+		.radio__item{
+		flex: 0 1 30.8%;
+		row-gap: 10px;
+		 }
+		 .shipping__radio{
+		width: 100%;
+		
+	}
+}
+
+
+@media (max-width:340px){
+	.form__line select{
+	font-size: 12px;
+}
+	 }
+

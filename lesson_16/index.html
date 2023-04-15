@@ -86,7 +86,7 @@
 							<h3 class="discount__title">Apply Coupon to get discount!</h3>
 							<div class="discount__info">
 								<div class="info__form">
-									<input class="info__input" required maxlength="5" name="coupon-code" value=""
+									<input class="info__input" required maxlength="20" name="coupon-code" value=""
 										placeholder="Coupon code" type="text">
 								</div>
 								<div class="discount-button">
@@ -117,11 +117,12 @@
 								placeholder="******************" type="tel">
 						</div>
 						<p>You already have an account with us. Sign in or continue as guest.</p>
-						<div class="shipping__block"></div>
 						<div class="button__login">
-							<button type="button" class="butt__login">login</button>
+							<button type="submit" class="butt__login">login</button>
 							<a href="" class="forgot__password">Forgot Your Password?</a>
 						</div>
+					</form>
+					<form class="form" action="#" method="post" enctype="multipart/form-data">
 						<div class="form__line">
 							<label class="form__label" for="first-name-01">First Name <span>*</span></label>
 							<input class="form__input" id="first-name-01" required value="" name="first-name" type="text">
@@ -145,7 +146,7 @@
 							<input class="form__input" id="country-01" value="" name="country-01" type="text">
 						</div>
 						<div class="form__line">
-							<label class="form__label" for="state">State/Province<span>*</span></label>
+							<label class="form__label" for="state">State/ Province<span>*</span></label>
 							<select name="list" id="state" class="list">
 								<option hidden selected value="">Please select a region, state or province</option>
 								<option value="">ID</option>
@@ -180,7 +181,7 @@
 						</div>
 						<div class="footer__buttons button">
 							<button class="button__next" type="submit">next</button>
-							<button class="button__back" type="submit">back</button>
+							<button class="button__back" type="reset">back</button>
 						</div>
 					</form>
 				</div>
