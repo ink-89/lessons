@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// ЗАДАЧА 7
+// 0
+// Місяць - month
+// День - day
+// Сума день+місяць - sumOfDayAndMonth
+// 1. Вводимо необхідні змінні
+let minMonth=1, maxMonth=12
+let month=minMonth+Math.floor(Math.random()*(maxMonth-minMonth+1))
+let minDay=0, maxDay=6
+let day=minDay+Math.floor(Math.random()*(maxDay-minDay+1))
+let sumOfDayAndMonth = month + day
+// 2. Результати обчислень
+document.write(`рандомний місяць: ${month} <br>`)
+document.write(`рандомний день: ${day} <br>`)
+document.write(`сума дня+місяця: ${sumOfDayAndMonth} <br>`)
+</script>
+ </main>
+</body>
+</html>
