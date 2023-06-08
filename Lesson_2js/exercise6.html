@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+</head>
+<body>
+ <main>
+	<script>
+// ЗАДАЧА 6
+// 0 
+// Товар 1 - productFirst
+// Товар 2 - productSecond
+// Товар 3 - productThird
+// Кіль-ть товару 1 - amountProductFirst 
+// Кіль-ть товару 2 - amountProductSecond 
+// Кіль-ть товару 3 - amountProductThird
+// Вартість товару 1 - priceProductFirst
+// Вартість товару 2 - priceProductSecond
+// Вартість товару 2 - priceProductThird
+// Загальна вартість усього- totalPrice
+// 1. Вводимо необхідні змінні
+let productFirst = parseFloat(prompt('Вкажіть кіл-ть першого  товару:'))
+let productSecond = parseFloat(prompt('Вкажіть кіл-ть другого товару:'))
+let productThird = parseFloat(prompt('Вкажіть кіл-ть третього товару:'))
+let priceProductFirst = parseFloat(prompt('Вкажіть ціну першого товару:'))
+let priceProductSecond = parseFloat(prompt('Вкажіть ціну другого товару:'))
+let priceProductThird = parseFloat(prompt('Вкажіть ціну третього товару:'))
+// 2. Обчислення результатів
+let amountProductFirst = productFirst * priceProductFirst
+let amountProductSecond = productSecond * priceProductSecond
+let amountProductThird = productThird * priceProductThird
+let totalPrice = amountProductFirst + amountProductSecond + amountProductThird
+// 3. Результати обчислень
+document.write(`Загальна вартість першого товару: ${amountProductFirst}грн <br>`)
+document.write(`Загальна вартість другого товару: ${amountProductSecond}грн <br>`)
+document.write(`Загальна вартість третього товару: ${amountProductThird}грн <br>`)
+document.write(`Загальна вартість товарів: ${totalPrice}грн <br>`)
+
+</script>
+ </main>
+</body>
+</html>
